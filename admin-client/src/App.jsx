@@ -1,14 +1,16 @@
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import React from 'react';
-import Home from './components/Home';
-import SignUp from './components/SignUp';
-import SignIn from './components/SignIn';
-import About from './components/About';
-import Profile from './components/Profile';
+import {FaSearch} from 'react-icons/fa';
+import Home from './pages/Home';
+import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
+import About from './pages/About';
+import Profile from './pages/Profile';
+import Appbar from './components/Appbar';
 
 export default function App() {
   return <div>
     <Router>
+      <Appbar />
       <Routes>
         <Route path={"/"} element={<Home />} />
         <Route path={"/sign-up"} element={<SignUp />} />
