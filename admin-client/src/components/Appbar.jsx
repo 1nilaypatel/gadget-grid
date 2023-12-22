@@ -1,7 +1,10 @@
 import { FaSearch } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
 import {Link} from 'react-router-dom';
 
 export default function Appbar() {
+  const {currentUser} = useSelector((state) => state.user);
+
   return (
     <header className='bg-black shadow-md'>
       <div className='flex justify-between items-center p-3 max-w-6xl mx-auto'>
@@ -32,10 +35,13 @@ export default function Appbar() {
               About
             </li>
           </Link>
-          <Link to='/sign-in'>
-          <li className='text-slate-400 hover:underline'>
-              SignIn
-            </li>
+
+          <Link to='/profile'>
+            {currentUser ?(
+              <img className='rounded-full h-8 w-8 object-cover' src={currentUser.profilephoto} alt='profile' />
+            ): (
+              <li className='text-slate-400 hover:underline'> SignIn </li>
+            )}
           </Link>
         </ul>
       </div>
