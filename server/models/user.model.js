@@ -17,10 +17,9 @@ const userSchema = new mongoose.Schema({
   },
   profilephoto:{
     type: String,
-    default: "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280-png"
+    default: "https://www.shutterstock.com/image-vector/vector-flat-illustration-grayscale-avatar-600nw-2264922221.jpg"
   }
-}, 
-{timestamps: true});
+}, {timestamps: true});
 
 const User = mongoose.model('User', userSchema);
 
