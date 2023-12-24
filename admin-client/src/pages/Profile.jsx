@@ -4,6 +4,7 @@ import { getDownloadURL, getStorage, ref, uploadBytesResumable } from 'firebase/
 import { app } from '../firebase';
 import { updateUserStart, updateUserSuccess, updateUserFailure, deleteUserFailure, deleteUserStart, deleteUserSuccess, signOutUserStart, signOutUserFailure, signOutUserSuccess, } from "../redux/user/userSlice";
 import { useDispatch } from 'react-redux';
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   const {currentUser, loading, error} = useSelector((state) => state.user);
@@ -108,7 +109,7 @@ export default function Profile() {
 
   return (
     <div className="p-6 max-w-lg mx-auto">
-      <h1 className='text-slate-100 text-center text-3xl font-semibold my-8'>Profile</h1>
+      <h1 className='text-slate-100 text-center text-3xl font-semibold my-5'>Profile</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <input 
           onChange={(e) => setFile(e.target.files[0])}
@@ -142,7 +143,7 @@ export default function Profile() {
           id="username"
           defaultValue={currentUser.username}
           onChange={handleChange}
-          className="border rounded-lg p-3 focus:outline-none"
+          className="border rounded-lg p-3 focus:outline-green-500"
         />
         <input 
           type="email"
@@ -150,14 +151,14 @@ export default function Profile() {
           id="email"
           defaultValue={currentUser.email}
           onChange={handleChange}
-          className="border rounded-lg p-3 focus:outline-none"
+          className="border rounded-lg p-3 focus:outline-green-500"
         />
         <input 
           type="password"
           placeholder="password"
           id="password"
           onChange={handleChange}
-          className="border rounded-lg p-3 focus:outline-none"
+          className="border rounded-lg p-3 focus:outline-green-500"
         />
         <button 
           disabled={loading}
@@ -165,6 +166,12 @@ export default function Profile() {
         >
           {loading ? 'Loading...' : 'Update'}
         </button>
+        <Link 
+          className='text-center bg-slate-950 text-slate-200 shadow-lg p-3 rounded-lg uppercase hover:bg-opacity-85'
+          to={'/create-listing'}
+        >
+          Create Listing
+        </Link>
       </form>
       <div className="mt-5 flex justify-between">
         <span onClick={handleDeleteUser} className="text-red-500 cursor-pointer font-semibold">Delete account</span>
