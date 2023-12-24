@@ -9,6 +9,10 @@ const listingSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  offer:{
+    type: Boolean,
+    required: true,
+  },
   price:{
     type: Number,
     required: true,
@@ -17,22 +21,18 @@ const listingSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  leftUnits:{
+    type: Number,
+    required: true,
+  },
   color:{
-    type: String,
+    type: Array,
     required: true,
   },
-  stock:{
-    type: Boolean,
-    required: true,
-  },
-  keyFeatures:{
-    type: String,
-    required: true,
-  },
-  overview:{
-    type: String,
-    required: true,
-  },
+  // keyFeatures:{
+  //   type: String,
+  //   required: true,
+  // },
   imageUrlsForTop:{
     type: Array,
     required: true,
