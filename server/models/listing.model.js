@@ -33,11 +33,7 @@ const listingSchema = new mongoose.Schema({
   //   type: String,
   //   required: true,
   // },
-  imageUrlsForTop:{
-    type: Array,
-    required: true,
-  },
-  imageUrlsForBottom:{
+  imageUrls:{
     type: Array,
     required: true,
   },
