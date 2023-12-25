@@ -102,7 +102,7 @@ export default function CreateListing() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      if(formData.imageUrls.lenght < 1){
+      if(formData.imageUrls.length < 1){
         return setError("At least one image need to be uploaded");
       }
       if(+formData.price < +formData.offerPrice){
@@ -122,7 +122,7 @@ export default function CreateListing() {
       });
       const data = await response.json();
       setLoading(false);
-      if(data.success === flase){
+      if(data.success === false){
         setError(data.message);
       }
       navigate(`/listing/${data._id}`);
