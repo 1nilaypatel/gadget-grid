@@ -41,7 +41,7 @@ export default function Contact({listing}){
           ></textarea>
           <Link 
             to={`mailto:${seller.email}?subject=Regarding${listing.name}&body=${message}`}
-            className='text-center bg-slate-950 text-slate-200 shadow-lg p-3 rounded-lg uppercase hover:bg-opacity-85'
+            className='text-center bg-slate-950 text-slate-200 shadow-lg p-3 rounded-lg uppercase hover:opacity-85'
           >
             Send Message
           </Link>

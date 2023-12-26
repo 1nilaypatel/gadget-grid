@@ -129,7 +129,7 @@ export default function Listing() {
             {currentUser && listing.userRef !== currentUser._id && !contact && (
               <button 
                 onClick={() => setContact(true)}
-                className='text-center bg-slate-950 text-slate-200 shadow-lg p-3 rounded-lg uppercase hover:bg-opacity-85'
+                className='text-center bg-slate-950 text-slate-200 shadow-lg p-3 rounded-lg uppercase hover:opacity-85'
               >
                 Contact Seller
               </button>
