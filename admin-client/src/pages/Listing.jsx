@@ -75,17 +75,22 @@ export default function Listing() {
           )}
           <div className='flex flex-col max-w-4xl mx-auto p-3 my-7 gap-4'>
             <p className='text-2xl text-slate-100 font-semibold'>
-              {listing.name} - ₹{' '}
-              {listing.offer
-                ? listing.offerPrice.toLocaleString('en-US')
-                : listing.price.toLocaleString('en-US')}
+              {listing.name} 
+              <br></br>
+              <p className='text-xl font-semibold'>
+                {'MRP: ₹'}
+                {listing.price}
+                {listing.offer && (
+                  <span className='text-red-500 w-full text-lg'>
+                    {" ₹"}{+listing.price - +listing.offerPrice} off
+                  </span>
+                )}
+              </p>
             </p>
             <div className='flex gap-4'>
-              {listing.offer && (
-                <p className='bg-green-500 w-full max-w-[200px] text-slate-100 text-center p-1 rounded-md'>
-                  ₹{+listing.price - +listing.offerPrice}
-                </p>
-              )}
+              <p className='bg-green-500 w-full max-w-[200px] text-slate-100 text-xl text-center font-semibold p-1 rounded-md'>
+              ₹{listing.offer ? listing.offerPrice.toLocaleString('en-US') : listing.price.toLocaleString('en-US')}
+              </p>
             </div>
             <p className='text-slate-300'>
               <span className='font-semibold text-slate-100'>Description </span>
