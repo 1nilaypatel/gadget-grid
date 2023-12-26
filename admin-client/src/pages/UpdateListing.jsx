@@ -16,6 +16,8 @@ export default function UpdateListing() {
     price: 99,
     offerPrice: 0,
     leftUnits: 1,
+    dimensions: "18x13x5",
+    warranty: "2",
     // color: [],
     imageUrls: [],
   });
@@ -157,7 +159,7 @@ export default function UpdateListing() {
           <input
             type="text"
             placeholder="Gadget Name"
-            className="border rounded-lg p-3 focus:outline-green-500"
+            className="border rounded-lg py-2 px-1.5 focus:outline-green-500"
             id="name"
             maxLength="100"
             minLength="10"
@@ -168,7 +170,7 @@ export default function UpdateListing() {
           <textarea
             type="text"
             placeholder="Product Overview"
-            className="border rounded-lg p-3 focus:outline-green-500"
+            className="border rounded-lg py-2 px-1.5 focus:outline-green-500"
             id="description"
             required
             onChange={handleChange}
@@ -191,7 +193,7 @@ export default function UpdateListing() {
                 id="price"
                 min='1'
                 max='300000'
-                className="border rounded-lg p-3 focus:outline-green-500"
+                className="border rounded-lg py-2 px-1.5 focus:outline-green-500"
                 required
                 onChange={handleChange}
                 value={formData.price}
@@ -207,7 +209,7 @@ export default function UpdateListing() {
                 id="offerPrice"
                 min='0'
                 max='300000'
-                className="border rounded-lg p-3 focus:outline-green-500"
+                className="border rounded-lg py-2 px-1.5 focus:outline-green-500"
                 required
                 onChange={handleChange}
                 value={formData.offerPrice}
@@ -219,7 +221,7 @@ export default function UpdateListing() {
             </div>
             )}
           </div>
-          {/* <div className="flex gap-4"> */}
+          <div className="flex gap-4">
             {/* <div className="flex items-center gap-2">
               <input
                 type="array"
@@ -236,17 +238,47 @@ export default function UpdateListing() {
                 id="leftUnits"
                 min='0'
                 max='100'
-                className="border rounded-lg p-3 focus:outline-green-500 w-13"
+                className="border rounded-lg py-2 px-1.5 focus:outline-green-500 w-14"
                 required
                 onChange={handleChange}
                 value={formData.leftUnits}
               />
               <div className="text-slate-400 flex flex-col items-center">
                 <p>Left Units</p>
-                <span className="text-sm">[0 - 100]</span>
+                <span className="text-xs">[0 - 100]</span>
               </div>
             </div>
-          {/* </div> */}
+            <div className="flex items-center gap-2">
+              <input
+                type="text"
+                id="dimensions"
+                className="border rounded-lg py-2 px-1.5 focus:outline-green-500 w-24"
+                required
+                onChange={handleChange}
+                value={formData.dimensions}
+              />
+              <div className="text-slate-400 flex flex-col items-center">
+                <p>Dimensions</p>
+                <span className="text-xs">in CM (WxDxH)</span>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <input
+                type="number"
+                id="warranty"
+                min='0'
+                max='10'
+                className="border rounded-lg py-2 px-1.5 focus:outline-green-500 w-12"
+                required
+                onChange={handleChange}
+                value={formData.warranty}
+              />
+              <div className="text-slate-400 flex flex-col items-center">
+                <p>Warranty</p>
+                <span className="text-xs">in Years</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className='flex flex-col flex-1 gap-5'>

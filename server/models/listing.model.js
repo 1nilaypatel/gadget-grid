@@ -33,6 +33,14 @@ const listingSchema = new mongoose.Schema({
   //   type: String,
   //   required: true,
   // },
+  dimensions:{
+    type: String,
+    required: true,
+  },
+  warranty:{
+    type: Number,
+    required: true,
+  },
   imageUrls:{
     type: Array,
     required: true,

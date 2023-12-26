@@ -41,7 +41,7 @@ export default function Listing() {
       {error && <p className='text-slate-100 text-center my-7 text-2xl'>Somethig went wrong</p>}
       {listing && !loading && !error && (
         <div>
-          <Swiper navigation>
+          <Swiper navigation className='custom-swiper'>
             {listing.imageUrls.map((url) => (
               <SwiperSlide key={url}>
                 <div

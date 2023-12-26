@@ -5,3 +5,9 @@
 body{
   background-color: rgba(40,40,40,255);
 }
+
+/* Listing.css */
+.custom-swiper .swiper-button-next,
+.custom-swiper .swiper-button-prev {
+  color: white; /* Set the color to white or your desired color */
+}
