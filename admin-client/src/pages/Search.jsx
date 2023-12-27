@@ -130,8 +130,8 @@ export default function Search() {
               id='sort_order' 
               className='border rounded-lg p-3 text-black focus:outline-green-500'
             >
-              <option value='regularPrice_desc'>Price high to low</option>
-              <option value='regularPrice_asc'>Price low to high</option>
+              <option value='price_desc'>Price high to low</option>
+              <option value='price_asc'>Price low to high</option>
               <option value='createdAt_desc'>Latest</option>
               <option value='createdAt_asc'>Oldest</option>
             </select>
