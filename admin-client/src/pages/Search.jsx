@@ -87,7 +87,7 @@ export default function Search() {
     const urlParams = new URLSearchParams(location.search);
     urlParams.set('startIndex', startIndex);
     const searchQuery = urlParams.toString();
-    const response = await fetch(`/api/listing/get?${searchQuery}`);
+    const response = await fetch(`/server/listing/get?${searchQuery}`);
     const data = await response.json();
     if (data.length < 9) {
       setShowMore(false);
@@ -160,7 +160,7 @@ export default function Search() {
             {showMore && (
             <button
               onClick={onShowMoreClick}
-              className='text-green-700 hover:underline p-7 text-center w-full'
+              className='text-green-500 text-lg hover:underline p-7 text-center w-full'
             >
               Show more
             </button>

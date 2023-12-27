@@ -5,7 +5,9 @@ import SwiperCore from 'swiper';
 import { useSelector } from 'react-redux';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
-import { FaShare, FaShieldAlt, FaRuler, FaCubes } from 'react-icons/fa';
+import { FaShare, FaShieldAlt, FaCubes } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock } from '@fortawesome/free-solid-svg-icons';
 import Contact from '../components/Contact';
 
 export default function Listing() {
@@ -112,10 +114,10 @@ export default function Listing() {
                 </div>
               </li>
               <li className='flex items-center gap-2 whitespace-nowrap '>
-                <FaRuler size={30}/>
+                <FontAwesomeIcon icon={faClock} size="2x"/>
                 <div className='flex flex-col items-center'>
-                  <p>Dimensions In CM (WxDxH)</p>
-                  {listing.dimensions}
+                  <p>Playback time</p>
+                  {listing.playbackTime} hours
                 </div>
               </li>
               <li className='flex items-center gap-2 whitespace-nowrap '>

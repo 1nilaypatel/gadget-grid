@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaShieldAlt, FaCubes } from 'react-icons/fa';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 export default function ListingItem({ listing }) {
   return (
@@ -19,7 +21,7 @@ export default function ListingItem({ listing }) {
           </p>
           <div className='flex items-center gap-1'>
             <FaCubes className='h-4 w-4 text-green-700' />
-            <div className='text-sm text-gray-600 truncate w-full'>
+            <div className='text-sm text-gray-600 w-full'>
               {listing.leftUnits}{' '}{listing.leftUnits > 1 ? "Units Left" : "Unit Left"}
             </div>
           </div>
@@ -29,10 +31,18 @@ export default function ListingItem({ listing }) {
           <p className='text-slate-500 mt-2 font-semibold '>
             ₹{listing.offer ? listing.offerPrice.toLocaleString('en-US') : listing.price.toLocaleString('en-US')}
           </p>
-          <div className='text-slate-700 flex items-center gap-1'>
-            <FaShieldAlt className='h-4 w-4 text-green-700'/>
-            <div className='font-bold text-xs'>
-              {listing.warranty > 1 ? `${listing.warranty} years ` : `${listing.warranty} year `}
+          <div className='text-slate-700 flex items-center gap-4'>
+            <div className='flex items-center gap-1'>
+              <FaShieldAlt className='h-4 w-4 text-green-700'/>
+              <div className='font-bold text-xs'>
+                {listing.warranty > 1 ? `${listing.warranty} years ` : `${listing.warranty} year `}
+              </div>
+            </div>
+            <div className='flex items-center gap-1'>
+              <FontAwesomeIcon icon={faClock} className='h-4 w-4 text-green-700'/>
+              <div className='font-bold text-xs'>
+                {listing.playbackTime}{" hours"}
+              </div>
             </div>
           </div>
         </div>

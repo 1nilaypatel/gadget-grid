@@ -15,9 +15,8 @@ export default function CreateListing() {
     price: 99,
     offerPrice: 0,
     leftUnits: 1,
-    dimensions: "18x13x5",
+    playbackTime: "7",
     warranty: "2",
-    // color: [],
     imageUrls: [],
   });
   const [imageUploadError, setImageUploadError] = useState(false);
@@ -207,16 +206,6 @@ export default function CreateListing() {
             )}
           </div>
           <div className="flex gap-4">
-            {/* <div className="flex items-center gap-2">
-              <input
-                type="array"
-                id="color"
-                className="border rounded-lg p-3 focus:outline-green-500"
-                required
-                /////////
-              />
-              <span className="text-slate-400">Add Color</span>
-            </div> */}
             <div className="flex items-center gap-2">
               <input
                 type="number"
@@ -235,16 +224,15 @@ export default function CreateListing() {
             </div>
             <div className="flex items-center gap-2">
               <input
-                type="text"
-                id="dimensions"
-                className="border rounded-lg py-2 px-1.5 focus:outline-green-500 w-24"
+                type="number"
+                id="playbackTime"
+                className="border rounded-lg py-2 px-1.5 focus:outline-green-500 w-12"
                 required
                 onChange={handleChange}
-                value={formData.dimensions}
+                value={formData.playbackTime}
               />
               <div className="text-slate-400 flex flex-col items-center">
-                <p>Dimensions</p>
-                <span className="text-xs">in CM (WxDxH)</span>
+                <p>Playback Time</p>
               </div>
             </div>
             <div className="flex items-center gap-2">

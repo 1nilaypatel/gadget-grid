@@ -25,16 +25,8 @@ const listingSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  // color:{
-  //   type: Array,
-  //   required: true,
-  // },
-  // keyFeatures:{
-  //   type: String,
-  //   required: true,
-  // },
-  dimensions:{
-    type: String,
+  playbackTime:{
+    type: Number,
     required: true,
   },
   warranty:{
