@@ -14,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     const fetchOfferListings = async () => {
       try {
-        const response = await fetch('/server/listing/get?offer=true&limit=3');
+        const response = await fetch('/server/listing/get?offer=false&limit=9');
         const data = await response.json();
         setOfferListings(data);
       } catch (error) {
@@ -45,7 +45,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <Swiper navigation className='custom-swiper'>
+      <Swiper navigation className='custom-swiper' loop={true}>
         {offerListings && offerListings.length > 0 && offerListings.map((listing) => (
           <SwiperSlide>
             <div

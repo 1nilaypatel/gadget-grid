@@ -104,7 +104,7 @@ export default function Search() {
             <input
               type='text'
               id='searchTerm'
-              placeholder='type Apple Air...'
+              placeholder='type Apple Airp...'
               value={sidebardata.searchTerm}
               onChange={handleChange}
               className='border rounded-lg p-3 w-full focus:outline-green-500 text-black'
