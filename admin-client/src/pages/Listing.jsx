@@ -43,7 +43,7 @@ export default function Listing() {
   }, [params.listingId]);
 
   return(
-    <main>
+    <main className='mt-20'>
       {loading && <p className='text-slate-100 text-center my-7 text-2xl'>Loading...</p>}
       {error && <p className='text-slate-100 text-center my-7 text-2xl'>Somethig went wrong</p>}
       {listing && !loading && !error && (

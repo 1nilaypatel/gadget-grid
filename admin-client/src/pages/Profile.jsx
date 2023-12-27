@@ -141,7 +141,7 @@ export default function Profile() {
   }
 
   return (
-    <div className="p-6 max-w-lg mx-auto">
+    <div className="p-6 max-w-lg mx-auto mt-20">
       <h1 className='text-slate-100 text-center text-3xl font-semibold my-5'>Profile</h1>
       <form onSubmit={handleSubmit} className="flex flex-col gap-5">
         <input 
@@ -159,7 +159,7 @@ export default function Profile() {
         />
         <p className='text-sm self-center'>
           {fileUploadError ? (
-            <span className='text-red-500 font-semibold'>
+            <span className='text-red-500 font-medium sm:font-semibold'>
               Error Image upload (image must be less than 2 mb)
             </span>
           ) : filePerc > 0 && filePerc < 100 ? (
@@ -207,10 +207,10 @@ export default function Profile() {
         </Link>
       </form>
       <div className="mt-5 flex justify-between">
-        <span onClick={handleDeleteUser} className="text-red-500 cursor-pointer font-semibold">Delete account</span>
-        <span onClick={handleSignOut} className="text-red-500 cursor-pointer font-semibold">Sign out</span>
+        <span onClick={handleDeleteUser} className="text-red-500 cursor-pointer font-medium sm:font-semibold">Delete account</span>
+        <span onClick={handleSignOut} className="text-red-500 cursor-pointer font-medium sm:font-semibold">Sign out</span>
       </div>
-      <p className='text-red-500 font-semibold mt-5'>{error ? error : ''}</p>
+      <p className='text-red-500 font-medium sm:font-semibold mt-5'>{error ? error : ''}</p>
       <p className='text-green-500'>{updateSuccess ? "User updated successfully" : ""}</p>
       <button onClick={handleShowListings} className='text-green-500 w-full'>
         Show Listings
@@ -224,7 +224,7 @@ export default function Profile() {
           YourListings
         </h1>
         {userListings.map((listing) => (
-          <div key={listing._id} className="border border-green-500 rounded-lg flex justify-between items-center gap-4 p-3">
+          <div key={listing._id} className="border border-green-500 rounded-lg flex justify-between items-center gap-4 p-3 ">
             <Link to={`/listing/${listing._id}`}>
               <img
                 src={listing.imageUrls[0]}
@@ -233,7 +233,7 @@ export default function Profile() {
               />
             </Link>
             <Link 
-              className="text-slate-200 font-semibold hover:underline flex-1"
+              className="text-slate-200 font-medium sm:font-semibold hover:underline flex-1"
               to={`/listing/${listing._id}`}
             >
               <p>{listing.name}</p>

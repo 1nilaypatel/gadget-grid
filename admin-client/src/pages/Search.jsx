@@ -96,7 +96,7 @@ export default function Search() {
   };
 
   return (
-    <div className='text-slate-300 flex flex-col md:flex-row'>
+    <div className='text-slate-300 flex flex-col md:flex-row mt-20'>
       <div className='p-7  border-b md:border-r border-slate-700 md:min-h-screen'>
         <form onSubmit={handleSubmit} className='flex flex-col gap-8'>
           <div className='flex items-center gap-2'>

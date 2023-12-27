@@ -2,7 +2,7 @@
 
 export default function About() {
   return (
-    <div className='py-20 px-4 max-w-6xl mx-auto'>
+    <div className='py-20 px-4 max-w-6xl mx-auto mt-20'>
       <h1 className='text-3xl font-bold mb-4'>
         <span className='text-slate-100'>Gadget</span>
         <span className='text-slate-400'>Grid</span>

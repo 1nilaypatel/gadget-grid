@@ -26,7 +26,7 @@ export default function Appbar() {
   }, [location.search]);
 
   return (
-    <header className='bg-black shadow-md'>
+    <header className='bg-black shadow-md fixed top-0 w-full z-50'>
       <div className='flex justify-between items-center p-3 max-w-6xl mx-auto'>
         <Link to='/'>
           <h1 className='flex fex-wrap font-bold text-sm sm:text-xl'>
@@ -34,11 +34,11 @@ export default function Appbar() {
             <span className='text-slate-400'>Grid</span>
           </h1>
         </Link>
-        <form onSubmit={handleSubmit} className='p-3 rounded-lg flex items-center bg-slate-100'>
+        <form onSubmit={handleSubmit} className='px-3 py-2 sm:p-3 rounded-lg flex items-center bg-slate-100 w-48 sm:w-72'>
           <input 
             type='text'
             placeholder='What are you looking for ?'
-            className='focus:outline-none w-64 bg-transparent'
+            className='focus:outline-none w-40 sm:w-72 bg-transparent truncate'
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -60,7 +60,7 @@ export default function Appbar() {
 
           <Link to='/profile'>
             {currentUser ?(
-              <img className='rounded-full h-8 w-8 object-cover' src={currentUser.profilephoto} alt='profile' />
+              <img className='rounded-full h-8 w-8 object-contain' src={currentUser.profilephoto} alt='profile' />
             ): (
               <li className='text-slate-400 hover:underline'> SignIn </li>
             )}

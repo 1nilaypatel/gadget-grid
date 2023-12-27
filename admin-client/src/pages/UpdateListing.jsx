@@ -149,7 +149,7 @@ export default function UpdateListing() {
   };
 
   return (
-    <main className="p-3 max-w-5xl mx-auto">
+    <main className="p-3 max-w-5xl mx-auto mt-20">
       <h1 className='text-slate-100 text-3xl font-semibold text-center mb-8 mt-6'>
         Update Listing
       </h1>
