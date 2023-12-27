@@ -5,7 +5,7 @@ import SwiperCore from 'swiper';
 import { useSelector } from 'react-redux';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css/bundle';
-import { FaBed, FaChair, FaParking, FaShare, FaShieldAlt, FaRuler, FaCubes} from 'react-icons/fa';
+import { FaShare, FaShieldAlt, FaRuler, FaCubes } from 'react-icons/fa';
 import Contact from '../components/Contact';
 
 export default function Listing() {
