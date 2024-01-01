@@ -1,3 +1,7 @@
+## Showcase Video
+
+[![GadgetGrid Showcase](https://img.youtube.com/vi/5rw3viZ3MiM/0.jpg)](https://www.youtube.com/watch?v=5rw3viZ3MiM)
+
 # GadgetGrid
 
 Unleash the perfect soundscape with GadgetGrid: A vibrant online marketplace connecting audiophiles with their ideal headphones and earphones.
