@@ -155,7 +155,7 @@ export default function Profile() {
           onClick={() => fileRef.current.click()}
           src={formData.profilephoto || currentUser.profilephoto} 
           alt="profile" 
-          className="rounded-full w-25 h-25 self-center cursor-pointer mt-2"
+          className="rounded-full w-28 h-28 self-center cursor-pointer mt-2"
         />
         <p className='text-sm self-center'>
           {fileUploadError ? (
